@@ -35,7 +35,7 @@ runCommand(
       `docker exec ${destContainer} bash -c "mongorestore --gzip /migrationRunning"`
     );
   }).then(() => {
-    console.log("Migration successful Now cleaning the cache");
+    console.log("Migration successful Now Wiping the temporary data");
     cleanData();
   })
   .catch((error) => {
